@@ -1,0 +1,12 @@
+- name: Install vim
+  ansible_python_interpreter: /usr/bin/python3
+  ansible.builtin.package:
+    name: vim
+    state: present
+
+
+
+- name: Check whether a package called foobar is installed
+  ansible.builtin.debug:
+    msg: "{{ ansible_facts.packages['vim'] | length }} versions of vim are installed!"
+  when: "'vim' in ansible_facts.packages"

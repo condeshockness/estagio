@@ -1,0 +1,12 @@
+- name: Instalando a ultima vesão dos pacotes Vim, nano, unzip, mtr,nmap,whois
+  hosts: site
+  become: true
+  tasks:
+  - name: Instalando
+    ansible.builtin.package:
+      name:
+        - vim
+      state: latest
+
+
+  

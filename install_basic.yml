@@ -1,0 +1,7 @@
+- hosts: site
+  become: true
+  roles:
+  - install_basic
+
+
+  
